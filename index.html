@@ -1,0 +1,249 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="images/logo2.jpg" type="image/png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Warner Bros. | Home</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="images/logo2.jpg" alt="Warner Bros. Logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="home.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="movies.html">Movies</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="tvshows.html">TV Shows</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="news.html">News</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="store.html">Store</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="cart.html"><i class="fas fa-shopping-cart"></i> Cart</a>
+                    </li>
+                </ul>
+                <button class="btn login-btn" id="login-btn" data-bs-toggle="modal" data-bs-target="#loginModal">
+                    Login
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1 class="display-3">Welcome to Warner Bros.</h1>
+            <p class="lead">Where the magic of movies and TV comes to life! Explore our iconic collection of legendary films and shows.</p>
+        </div>
+    </section>
+
+    <!-- Popular Movies Section -->
+    <section class="container my-5">
+        <h2 class="text-center">Popular Movies</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card h-100" onclick="redirectTo('https://dopebox.to/watch-movie/watch-the-dark-knight-online-hd-19752.5297326')">
+                    <img src="images/darkknight.jpg" class="card-img-top" alt="The Dark Knight">
+                    <div class="card-body">
+                        <h5 class="card-title">The Dark Knight</h5>
+                        <p class="card-text">Step into the shadows with the caped crusader and his fight against Gotham's darkest villain.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100" onclick="redirectTo('https://dopebox.to/watch-movie/watch-harry-potter-and-the-philosophers-stone-online-hd-19812.5352007')">
+                    <img src="images/harrypotter.jpg" class="card-img-top" alt="Harry Potter">
+                    <div class="card-body">
+                        <h5 class="card-title">Harry Potter</h5>
+                        <p class="card-text">Join Harry and friends on their magical journey at Hogwarts – the wizarding world awaits!</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100" onclick="redirectTo('https://dopebox.to/watch-movie/watch-inception-online-hd-19764.5297266')">
+                    <img src="images/inception.jpg" class="card-img-top" alt="Inception">
+                    <div class="card-body">
+                        <h5 class="card-title">Inception</h5>
+                        <p class="card-text">Enter the world of dreams within dreams, where reality is twisted and nothing is as it seems.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Popular TV Shows Section -->
+    <section class="container my-5">
+        <h2 class="text-center">Popular TV Shows</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card h-100" onclick="redirectTo('https://dopebox.to/tv/watch-friends-online-hd-39473')">
+                    <img src="images/friends.jpg" class="card-img-top" alt="Friends">
+                    <div class="card-body">
+                        <h5 class="card-title">Friends</h5>
+                        <p class="card-text">Relive the laughs, love, and iconic moments with Rachel, Ross, Monica, Chandler, Joey, and Phoebe!</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100" onclick="redirectTo('https://dopebox.to/tv/watch-the-big-bang-theory-online-hd-39508')">
+                    <img src="images/tbbt.jpg" class="card-img-top" alt="The Big Bang Theory">
+                    <div class="card-body">
+                        <h5 class="card-title">The Big Bang Theory</h5>
+                        <p class="card-text">Get ready for hilarious antics with a group of genius scientists and their unexpected friendships.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100" onclick="redirectTo('https://dopebox.to/tv/watch-game-of-thrones-online-hd-39539')">
+                    <img src="images/got.jpg" class="card-img-top" alt="Game of Thrones">
+                    <div class="card-body">
+                        <h5 class="card-title">Game of Thrones</h5>
+                        <p class="card-text">Enter a world of power struggles, dragons, and unforgettable characters. The Iron Throne awaits!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-section">
+        <div class="container">
+            <h2 class="text-center">About Warner Bros.</h2>
+            <p class="text-center">Founded in 1923, Warner Bros. is one of the most influential film studios in Hollywood. With a rich history of creating iconic films and TV shows, Warner Bros. has captivated audiences worldwide with unforgettable stories and legendary characters. From Batman and Harry Potter to Game of Thrones and Friends, Warner Bros. continues to entertain and inspire millions.</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <div class="container">
+            <h2 class="text-center">Contact Us</h2>
+            <div class="row justify-content-center">
+                <div class="col-md-6 text-center">
+                    <p>If you need further assistance or have questions, feel free to reach out to us:</p>
+                    <p><i class="fas fa-envelope me-2"></i> <a href="mailto:mmolawaushe2@gmail.com" class="text-warning">mmolawaushe2@gmail.com</a></p>
+                    <p><i class="fas fa-phone me-2"></i> +1 (758) 26717</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start">
+                    <p>&copy; 2025 Warner Bros. All rights reserved. Designed by Kagiso Mmolawa.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Login Modal -->
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Login</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="loginForm">
+                        <div class="mb-3">
+                            <input type="text" class="form-control" id="loginUsername" placeholder="Username" required>
+                        </div>
+                        <div class="mb-3">
+                            <input type="password" class="form-control" id="loginPassword" placeholder="Password" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">Login</button>
+                    </form>
+                    <p class="text-center mt-3">Don't have an account? <span class="switch-form" onclick="switchToSignup()">Sign Up</span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Signup Modal -->
+    <div class="modal fade" id="signupModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Sign Up</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="signupForm">
+                        <div class="mb-3">
+                            <input type="text" class="form-control" id="signupUsername" placeholder="Username" required>
+                        </div>
+                        <div class="mb-3">
+                            <input type="email" class="form-control" id="signupEmail" placeholder="Email" required>
+                        </div>
+                        <div class="mb-3">
+                            <input type="password" class="form-control" id="signupPassword" placeholder="Password" required>
+                        </div>
+                        <div class="mb-3">
+                            <input type="password" class="form-control" id="confirmPassword" placeholder="Confirm Password" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">Sign Up</button>
+                    </form>
+                    <p class="text-center mt-3">Already have an account? <span class="switch-form" onclick="switchToLogin()">Login</span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+   <script src="js/bootstrap.bundle.min.js"></script>
+   <script src="js/script.js"></script>
+   <!-- Add this right before closing </body> tag -->
+<div class="toast-container position-fixed bottom-0 end-0 p-3">
+  <div id="cartToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+    <div class="toast-header bg-dark text-white">
+      <strong class="me-auto">Cart Updated</strong>
+      <button type="button" class="btn-close btn-close-white" data-bs-dismiss="toast" aria-label="Close"></button>
+    </div>
+    <div class="toast-body bg-secondary text-white">
+      <span id="toastMessage">Item added to cart!</span>
+    </div>
+  </div>
+</div>
+</body>
+</html>
