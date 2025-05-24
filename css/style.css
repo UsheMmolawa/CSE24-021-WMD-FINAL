@@ -1,0 +1,505 @@
+/* ===== GLOBAL STYLES ===== */
+:root {
+  --primary: #FFD700;
+  --dark: #0e0e0e;
+  --light: #ffffff;
+  --accent: #ff5722;
+  --secondary: #1c1c1c;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background: var(--dark);
+  color: var(--light);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+}
+
+/* ===== NAVBAR ===== */
+.navbar {
+  background: rgba(0, 0, 0, 0.9) !important;
+  padding: 15px 0;
+  border-bottom: 2px solid var(--primary);
+}
+
+.navbar-brand img {
+  height: 50px;
+  transition: transform 0.3s;
+}
+
+.navbar-brand img:hover {
+  transform: scale(1.1);
+}
+
+.nav-link {
+  color: var(--light) !important;
+  font-weight: bold;
+  margin: 0 10px;
+  position: relative;
+  transition: all 0.3s;
+}
+
+.nav-link:hover, 
+.nav-link:focus {
+  color: var(--primary) !important;
+  transform: scale(1.1);
+}
+
+.nav-link.active {
+  color: var(--primary) !important;
+  text-decoration: underline;
+}
+
+.cart-count {
+  background: var(--primary);
+  color: black;
+  border-radius: 50%;
+  padding: 0 6px;
+  font-size: 0.8rem;
+  margin-left: 5px;
+}
+
+/* ===== HERO SECTIONS ===== */
+.hero {
+  padding: 80px 0;
+  text-align: center;
+  background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
+              url('../images/logo2.jpg');
+  background-size: cover;
+  background-position: center;
+  margin-bottom: 40px;
+}
+
+.hero h1 {
+  font-size: 4rem;
+  text-shadow: 3px 3px 0 #000;
+  margin-bottom: 20px;
+  animation: glitch 1s linear infinite;
+  color: var(--primary);
+}
+
+.hero p {
+  font-size: 1.5rem;
+  text-shadow: 2px 2px 0 #000;
+}
+
+/* ===== CARDS ===== */
+.card, 
+.show-card, 
+.movie-card, 
+.news-card, 
+.product-card {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  height: 100%;
+  border: none;
+  position: relative;
+}
+
+.card:hover, 
+.show-card:hover, 
+.movie-card:hover, 
+.news-card:hover, 
+.product-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.card-img-top, 
+.show-card img, 
+.movie-card img, 
+.news-card img, 
+.product-img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+  transition: transform 0.5s;
+}
+
+.card:hover .card-img-top, 
+.show-card:hover img, 
+.movie-card:hover img, 
+.news-card:hover img, 
+.product-card:hover .product-img {
+  transform: scale(1.1);
+}
+
+.card-body, 
+.show-card-body, 
+.movie-card-body, 
+.news-card-body, 
+.product-body {
+  padding: 15px;
+  text-align: center;
+  background: rgba(0,0,0,0.7);
+}
+
+.card-title, 
+.show-card-title, 
+.movie-card-title, 
+.news-card-title, 
+.product-title {
+  font-size: 1.2rem;
+  margin: 0;
+  text-shadow: 1px 1px 0 #000;
+  color: var(--primary);
+}
+
+/* ===== BADGES ===== */
+.show-card-badge, 
+.product-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: var(--primary);
+  color: #000;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 0.8rem;
+}
+
+.product-badge {
+  background-color: #dc3545;
+  color: white;
+}
+
+/* ===== SCROLLABLE ROWS ===== */
+.shows-row, 
+.movies-row {
+  display: flex;
+  overflow-x: auto;
+  padding: 20px 0;
+  scrollbar-width: thin;
+  scrollbar-color: var(--accent) #ff9800;
+}
+
+.shows-row::-webkit-scrollbar, 
+.movies-row::-webkit-scrollbar {
+  height: 8px;
+}
+
+.shows-row::-webkit-scrollbar-track, 
+.movies-row::-webkit-scrollbar-track {
+  background: #ff9800;
+  border-radius: 10px;
+}
+
+.shows-row::-webkit-scrollbar-thumb, 
+.movies-row::-webkit-scrollbar-thumb {
+  background-color: var(--accent);
+  border-radius: 10px;
+}
+
+/* ===== MODALS ===== */
+.modal-content {
+  background-color: var(--dark);
+  color: var(--light);
+  border: 2px solid var(--primary);
+}
+
+.modal-header {
+  border-bottom: 1px solid var(--primary);
+}
+
+.modal-title {
+  color: var(--primary);
+}
+
+.btn-close {
+  filter: invert(1);
+}
+
+/* ===== TIMELINE ===== */
+.timeline {
+  position: relative;
+  max-width: 1200px;
+  margin: 50px auto;
+}
+
+.timeline::after {
+  content: '';
+  position: absolute;
+  width: 6px;
+  background-color: white;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -3px;
+  border-radius: 10px;
+}
+
+.timeline-item {
+  padding: 10px 40px;
+  position: relative;
+  width: 50%;
+  box-sizing: border-box;
+}
+
+.timeline-item::after {
+  content: '';
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  right: -12px;
+  background-color: var(--accent);
+  border: 4px solid white;
+  top: 15px;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+/* ===== FOOTER ===== */
+footer, 
+.footer {
+  background: rgba(0, 0, 0, 0.9);
+  padding: 30px 0;
+  margin-top: auto;
+  border-top: 2px solid var(--primary);
+}
+
+.social-icons a {
+  color: white;
+  font-size: 1.5rem;
+  margin: 0 10px;
+  transition: color 0.3s;
+}
+
+.social-icons a:hover {
+  color: var(--primary);
+}
+
+/* ===== ANIMATIONS ===== */
+@keyframes glitch {
+  0% { text-shadow: 2px 2px 0 red; }
+  25% { text-shadow: -2px -2px 0 blue; }
+  50% { text-shadow: 2px -2px 0 green; }
+  75% { text-shadow: -2px 2px 0 yellow; }
+  100% { text-shadow: 2px 2px 0 red; }
+}
+
+/* ===== RESPONSIVE ADJUSTMENTS ===== */
+@media (max-width: 992px) {
+  .hero h1 {
+    font-size: 3rem;
+  }
+  
+  .category-label {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+  
+  .hero p {
+    font-size: 1.2rem;
+  }
+  
+  .category-label {
+    font-size: 1.5rem;
+  }
+  
+  .show-card img, 
+  .movie-card img {
+    height: 200px;
+  }
+  
+  .timeline::after {
+    left: 31px;
+  }
+  
+  .timeline-item {
+    width: 100%;
+    padding-left: 70px;
+    padding-right: 25px;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+  
+  .category-label {
+    font-size: 1.2rem;
+  }
+  
+  .show-card img, 
+  .movie-card img {
+    height: 150px;
+  }
+}
+/* ===== ENHANCED HERO SECTIONS ===== */
+.hero {
+  padding: 100px 0;
+  text-align: center;
+  background: linear-gradient(135deg, rgba(0,0,0,0.8) 0%, rgba(30,30,30,0.7) 100%), 
+              url('../images/warner-bros-background.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  margin-bottom: 40px;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at 20% 50%, 
+    rgba(255, 215, 0, 0.1) 0%, 
+    transparent 50%);
+  z-index: 0;
+}
+
+.hero h1 {
+  font-size: 4.5rem;
+  text-shadow: 3px 3px 0 #000, 
+              -3px -3px 0 var(--accent);
+  margin-bottom: 20px;
+  animation: glitch 1s linear infinite;
+  color: var(--primary);
+  position: relative;
+  z-index: 1;
+  font-weight: 900;
+  letter-spacing: 2px;
+}
+
+.hero p {
+  font-size: 1.5rem;
+  text-shadow: 2px 2px 0 #000;
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+  margin: 0 auto 30px;
+  line-height: 1.6;
+}
+
+/* ===== ENHANCED CARD EFFECTS ===== */
+.card, .show-card, .movie-card, .news-card, .product-card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  cursor: pointer;
+  height: 100%;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  position: relative;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.card:hover, .show-card:hover, .movie-card:hover, .news-card:hover, .product-card:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+  border-color: var(--primary);
+}
+
+/* ===== GLOW EFFECTS ===== */
+.glow-on-hover {
+  position: relative;
+  z-index: 0;
+}
+
+.glow-on-hover::before {
+  content: '';
+  background: linear-gradient(45deg, 
+    #ff0000, #ff7300, #fffb00, #48ff00, 
+    #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 10px;
+  animation: glowing 20s linear infinite;
+}
+
+.glow-on-hover:hover::before {
+  opacity: 0.7;
+}
+
+@keyframes glowing {
+  0% { background-position: 0 0; }
+  50% { background-position: 400% 0; }
+  100% { background-position: 0 0; }
+}
+
+/* ===== SMOOTH PAGE TRANSITIONS ===== */
+body {
+  opacity: 1;
+  transition: opacity 0.5s ease;
+}
+
+body.fade-out {
+  opacity: 0;
+}
+
+/* ===== ENHANCED NAVBAR ===== */
+.navbar {
+  backdrop-filter: blur(10px);
+  background: rgba(0, 0, 0, 0.7) !important;
+  transition: all 0.3s ease;
+}
+
+.navbar.scrolled {
+  padding: 10px 0;
+  background: rgba(0, 0, 0, 0.9) !important;
+}
+
+/* ===== MODAL ENHANCEMENTS ===== */
+.modal-content {
+  background: rgba(20, 20, 20, 0.9);
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 215, 0, 0.3);
+  box-shadow: 0 0 30px rgba(255, 215, 0, 0.2);
+}
+
+/* ===== PULSE ANIMATION FOR IMPORTANT ELEMENTS ===== */
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+.pulse {
+  animation: pulse 2s infinite;
+}
+
+/* ===== SCROLLBAR STYLING ===== */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--dark);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #ffea00;
+}
